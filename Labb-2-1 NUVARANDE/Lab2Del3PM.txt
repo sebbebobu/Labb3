@@ -1,0 +1,113 @@
+Laboration 2 del 3.
+
+Läs labkriterierna längst ner på sidan innan ni fortsätter!
+
+I denna laborationsuppgift ska ni fortsätta på den lösning ni gjort i del 1 och
+2. Målet är att undersöka hur ni har använt, och kan använda, design patterns
+för att lösa designproblem.
+
+Se till att noga läsa igenom instruktionerna och att ni följer de regler och
+krav som labbdokumentet föreskriver. Börja med att kolla igenom hela
+labbdokumentet och se vad som krävs för att få godkänt, samt att ni laddar ner
+de filer som krävs. Koden som skrivs och godkänns i denna lab kommer att
+användas till nästa del.
+
+Design-uppgifter:
+=========================
+Uppgift a)
+
+Användargränssnittet ni utgick från i del 2 var en implementation av model-view-
+-controller, men där gränsdragningen mellan model, view, controller och
+applikation inte var något vidare genomtänkt.
+
+Vilka avvikelser från MVC-idealet kan ni identifiera i det ursprungliga användar-
+gränssnittet? Vad borde ha gjorts smartare, dummare eller tunnare?
+
+Vilka av dessa brister åtgärdade ni med er nya design från del 2? Hur då?
+
+Vilka brister åtgärdade ni inte? Rita ett UML-diagram som beskriver en
+förbättrad design med avseende på MVC.
+
+(Det ursprungliga gränssnittet finns kvar i git-repot där ni hittade det:
+  https://github.com/niklasbroberg/DIT953-lab2)
+
+Uppgift b)
+
+Factory method, composite, state, observer. För vart och ett av dessa fyra
+design patterns, svara på följande frågor:
+
+- Finns det något ställe i er design där ni redan använder detta pattern,
+  avsiktligt eller oavsiktligt? Vilka designproblem löste ni genom att använda
+  det?
+- Finns det något ställe där ni kan förbättra er design genom att använda detta
+  design pattern? Vilka designproblem skulle ni lösa genom att använda det?
+  Om inte, varför skulle er design inte förbättras av att använda det?
+
+VG-uppgift:
+=========================
+Skriv ut "<Bil>: <Hastighet>" i något lämpligt hörn av panelen, eller kanske
+på en helt ny JLabel ni kan lägga under alla knappar. Detta bör göras inte som
+ett tillägg till den befintliga vyn, utan som en ny vy som kan samexistera med
+den gamla vyn, existera fristående från den gamla vyn, eller samexistera med
+helt andra vyer.
+
+Hur bör eran MVC-lösning vara utformad för att möjliggöra att ovanstående
+förändring blir en utökning snarare än en modifikation? Hur bör de olika
+komponenterna kommunicera med varandra?
+
+Programmerings-uppgifter:
+=========================
+Uppgift c)
+
+Implementera de möjliga designförbättringar ni identifierat i uppgift a) och b).
+
+Uppgift d)
+
+Implementera funktionalitet för att lägga till och ta bort bilar via GUI:t. För
+att göra det behövs ändringar i både view och controller --- gör genomtänkta
+beslut om vilka förändringar som ska hamna var.
+
+Skapa en "Add car" och en "Remove car"-knapp med följande funktionalitet:
+- "Add car" ska antingen generera en slumpmässig bil eller en given bil.
+- "Remove car" ska ta bort någon bil --- välj själva hur det avgörs vilken.
+- Om inga bilar finns ska "Remove car" inte ha någon effekt, och om det finns 10
+  bilar ska "Add car" inte ha någon effekt.
+
+== Frivilliga BONUS-uppgifter ==
+
+Bonus-uppgift e)
+
+Anti-patterns är design patterns onda tvillingbröder: vanligt återkommande
+mönster som inte löser problem utan skapar dem. Läs på lite om vilka
+anti-patterns det brukar talas om:
+
+  https://en.wikipedia.org/wiki/Anti-pattern#Software_engineering
+
+Kan ni identifiera någon användning av anti-patterns i er design eller kod?
+Fanns det någon användning av anti-patterns i det ursprungliga
+användargränssnittet, som ni åtgärdat med er nya design?
+
+Bonus-uppgift f)
+
+Gör så att man kan välja vilken bil man vill ta bort genom att markera bilarna,
+så att de blir "highlightade".
+
+Bonus-uppgift g)
+
+Gör ett spel av er simulator, komplett med poäng och 2-spelarfunktionalitet.
+
+--------------------------------------------------------------------------------
+Krav för godkänd redovisning:
+- Alla gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet
+  individuellt.
+- Alla uppgifter ska vara lösta vid redovisningen.
+- Lösningen skall gå att kompilera och köra!
+
+Labbkriterier:
+- Det är absolut förbjudet att dela, kopiera eller använda kod från varandra på
+  något sätt. Det är däremot accepterat att diskutera uppgifter och lösningar
+  sinsemellan.
+- För att få godkänt på labben gör ni muntliga redovisningar. Gruppen gör detta
+  samtidigt: alla gruppmedlemmar kommer ställas frågor var och en för sig. För
+  att gruppen ska bli godkänd ska alla gruppmedlemmar kunna svara på frågor.
+  Så se till att ni hänger med i laborationen; fråga om hjälp ifall ni fastnar.

@@ -1,0 +1,80 @@
+Laboration 2 del 2.
+
+Läs labkriterierna längst ner på sidan innan ni fortsätter!
+
+I denna laborationsuppgift ska ni fortsätta på den lösning ni gjort i del 1.
+Målet är att göra ert program mer modulärt.
+
+Se till att noga läsa igenom instruktionerna och att ni följer de regler och
+krav som labbdokumentet föreskriver. Börja med att kolla igenom hela
+labbdokumentet och se vad som krävs för att få godkänt, samt att ni laddar ner
+de filer som krävs. Koden som skrivs och godkänns i denna lab kommer att
+användas till nästa del.
+
+Programmerings-uppgifter:
+=========================
+Uppgift a)
+
+Utgå från ert UML-diagram från del 1 uppgift c).
+
+Analysera era klasser med avseende på separation of concern (SoC) och single
+responsibility-principle (SRP). Vad har era klasser för ansvarsområde(n)? Vad
+har de för anledningar att ändras? På vilka klasser skulle ni behöva tillämpa
+dekomposition för att bättre följa SoC och SRP?
+
+Uppgift b)
+
+Rita ett UML-diagram över en ny design som åtgärdar de brister ni identifierat
+med avseende både på beroenden och ansvarsfördelning, dvs. både från uppgift a)
+och från del 1 uppgift c).
+
+Motivera, i termer av de principer vi gått igenom, varför era förbättringar
+verkligen är förbättringar. Relatera till de design patterns ni sett.
+
+Uppgift c)
+
+Skriv en refaktoriseringsplan. Planen bör bestå av en sekvens
+refaktoriseringssteg som tar er från det nuvarande programmet till ett som
+implementerar er nya design. Planen behöver inte vara enormt detaljerad.
+
+Finns det några delar av planen som går att utföra parallellt, av olika
+utvecklare som arbetar oberoende av varandra? Om inte, finns det något sätt att
+omformulera planen så att en sådan arbetsdelning är möjlig?
+
+Uppgift d)
+Refaktorisera koden med hjälp av planen från föregående uppgift. Förvissa er om
+att programmets funktionalitet förblir oförändrad.
+
+VG-uppgift:
+=========================
+
+Gör bilmodellen (men inte användargränssnittet) immutable i görligaste mån.
+Gör detta utan att programmets observerbara beteende ändras: fast ett bilobjekt inte
+kan ändras efter att det skapas, ska användarupplevelsen med bilar som rör sig vara
+oförändrad. Resonera om för- och nackdelar med att gå olika långt i projektet att göra
+allt immutable.
+
+== Frivillig BONUS-uppgift ==
+- Ordna en dialogruta som startar i början av programmet, som frågar vilka
+  av de 3 bilarna ni vill inkludera i simulationen. Fråga även användaren om
+  simulationens hastighet: Snabb (20 ms delay), Normal (50 ms), Långsam (100 ms).
+- Kan du få piltangenterna på tangentbordet att ändra bilarnas riktning, och se
+  till att kollisioner hanteras med kollisionshanteringen från bonusuppgiften
+  i del 1?
+  (Very Hard mode)
+
+--------------------------------------------------------------------------------
+Krav för godkänd redovisning:
+- Alla gruppmedlemmar skall ha skrivit på koden och känna till hela arbetet
+  individuellt.
+- Alla uppgifter ska vara lösta vid redovisningen.
+- Lösningen skall gå att kompilera och köra!
+
+Labbkriterier:
+- Det är absolut förbjudet att dela, kopiera eller använda kod från varandra på
+  något sätt. Det är däremot accepterat att diskutera uppgifter och lösningar
+  sinsemellan.
+- För att få godkänt på labben gör ni muntliga redovisningar. Gruppen gör detta
+  samtidigt: alla gruppmedlemmar kommer ställas frågor var och en för sig. För
+  att gruppen ska bli godkänd ska alla gruppmedlemmar kunna svara på frågor.
+  Så se till att ni hänger med i laborationen; fråga om hjälp ifall ni fastnar.

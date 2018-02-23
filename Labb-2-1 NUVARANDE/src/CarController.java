@@ -29,7 +29,8 @@ public class CarController {
     public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
-
+        cc.cars = VehicleFactory.standardVehicles();
+        /*
         cc.cars.add(new Volvo240());
         cc.cars.add(new Saab95());
         cc.cars.add(new Scania());
@@ -50,7 +51,7 @@ public class CarController {
 
         cc.cars.get(2).turnRight();
         cc.cars.get(2).turnRight();
-
+        */
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
 

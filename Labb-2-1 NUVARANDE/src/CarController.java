@@ -199,7 +199,7 @@ public class CarController {
 
     /**
      * Method for removing a vehicle in the list of vehicles randomly.
-     * IF empty THEN throws IllegalStateException.
+     * IF the list of vehicles is empty THEN throws IllegalStateException.
      */
     public void removeVehicle() throws IllegalStateException{
         if (cars.size() == 0) throw new IllegalStateException("Vehicle-list is empty!");
@@ -207,4 +207,29 @@ public class CarController {
         cars.remove(randomIndex);
     }
 
+
+    /**
+     * Method for adding a vehicle to the list of vehicles randomly.
+     * IF the size of the vehicle-list is greater than 10 THEN no vehicle will be added.
+     */
+    public void addVehicle(){
+        if (cars.size() < 10) {
+            int randomVehicle = ThreadLocalRandom.current().nextInt(0, 3 + 1);
+
+            switch (randomVehicle){
+                case 0: // SCANIA
+                    //... Call Factory?
+                    cars.add(VehicleFactory.createDesiredVehicle("Scania"));
+                    break;
+                case 1: // VOLVO
+                    // ... Call Factory?
+                    cars.add(VehicleFactory.createDesiredVehicle("Volvo240"));
+                    break;
+                case 2: // SAAB
+                    // ... Call Factory?
+                    cars.add(VehicleFactory.createDesiredVehicle("Saab95"));
+                    break;
+            }
+        }
+    }
 }

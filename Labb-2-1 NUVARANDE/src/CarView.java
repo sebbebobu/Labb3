@@ -199,6 +199,18 @@ public class CarView extends JFrame{
                 carC.liftRamps();
             }
         });
+        addButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carC.addVehicle();
+            }
+        });
+        removeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carC.removeVehicle();
+            }
+        });
 
 
 

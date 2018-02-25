@@ -37,7 +37,7 @@ public class VehicleFactory {
         saab.setPosition(new Point(100,300));
         scania.setPosition(new Point(100,500));
 
-        saab.turnRight();
+        //saab.turnRight();
         volvo.turnRight();
         volvo.turnRight();
 

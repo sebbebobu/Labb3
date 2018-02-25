@@ -197,13 +197,15 @@ public class CarController {
         }
     }
 
+
+
     /**
      * Method for removing a vehicle in the list of vehicles randomly.
      * IF the list of vehicles is empty THEN throws IllegalStateException.
      */
     public void removeVehicle() throws IllegalStateException{
         if (cars.size() == 0) throw new IllegalStateException("Vehicle-list is empty!");
-        int randomIndex = ThreadLocalRandom.current().nextInt(0, cars.size() + 1);
+        int randomIndex = (cars.size() == 1) ? 0 : ThreadLocalRandom.current().nextInt(0, cars.size());
         cars.remove(randomIndex);
     }
 
@@ -214,22 +216,28 @@ public class CarController {
      */
     public void addVehicle(){
         if (cars.size() < 10) {
-            int randomVehicle = ThreadLocalRandom.current().nextInt(0, 3 + 1);
-
+            int randomVehicle = ThreadLocalRandom.current().nextInt(0, 3);
+            Car car;
             switch (randomVehicle){
                 case 0: // SCANIA
                     //... Call Factory?
-                    cars.add(VehicleFactory.createDesiredVehicle("Scania"));
+                    car = (VehicleFactory.createDesiredVehicle("Scania"));
                     break;
                 case 1: // VOLVO
                     // ... Call Factory?
-                    cars.add(VehicleFactory.createDesiredVehicle("Volvo240"));
+                    car = (VehicleFactory.createDesiredVehicle("Volvo240"));
                     break;
                 case 2: // SAAB
                     // ... Call Factory?
-                    cars.add(VehicleFactory.createDesiredVehicle("Saab95"));
+                    car = (VehicleFactory.createDesiredVehicle("Saab95"));
                     break;
+                default:
+                    throw new IllegalArgumentException("What");
             }
+            int randomX = ThreadLocalRandom.current().nextInt(0, 600);
+            int randomY = ThreadLocalRandom.current().nextInt(0,500);
+            car.setPosition(new Point(randomX,randomY));
+            cars.add(car);
         }
     }
 }

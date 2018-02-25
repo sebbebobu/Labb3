@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -195,4 +196,15 @@ public class CarController {
             }
         }
     }
+
+    /**
+     * Method for removing a vehicle in the list of vehicles randomly.
+     * IF empty THEN throws IllegalStateException.
+     */
+    public void removeVehicle() throws IllegalStateException{
+        if (cars.size() == 0) throw new IllegalStateException("Vehicle-list is empty!");
+        int randomIndex = ThreadLocalRandom.current().nextInt(0, cars.size() + 1);
+        cars.remove(randomIndex);
+    }
+
 }

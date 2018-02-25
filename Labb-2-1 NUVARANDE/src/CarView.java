@@ -39,6 +39,9 @@ public class CarView extends JFrame{
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
 
+    JButton addButton = new JButton("Add a vehicle");
+    JButton removeButton = new JButton("Remove a vehicle");
+
     // Constructor
     public CarView(String framename, CarController cc){
         this.carC = cc;
@@ -75,29 +78,51 @@ public class CarView extends JFrame{
 
         this.add(gasPanel);
 
-        controlPanel.setLayout(new GridLayout(2,4));
+        controlPanel.setLayout(new GridLayout(2,5));
 
-        controlPanel.add(gasButton, 0);
-        controlPanel.add(turboOnButton, 1);
-        controlPanel.add(liftBedButton, 2);
-        controlPanel.add(brakeButton, 3);
-        controlPanel.add(turboOffButton, 4);
-        controlPanel.add(lowerBedButton, 5);
-        controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
+
+
+
+
+        controlPanel.setPreferredSize(new Dimension(X-100, 200));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
 
 
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
-        startButton.setPreferredSize(new Dimension(X/5-15,200));
+        startButton.setPreferredSize(new Dimension(100,100));
         this.add(startButton);
-
 
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
-        stopButton.setPreferredSize(new Dimension(X/5-15,200));
+        stopButton.setPreferredSize(new Dimension(100,100));
         this.add(stopButton);
+
+        addButton.setBackground(Color.blue);
+        addButton.setForeground(Color.green);
+        addButton.setPreferredSize(new Dimension(100,100));
+        this.add(addButton);
+
+        removeButton.setBackground(Color.red);
+        removeButton.setForeground(Color.black);
+        removeButton.setPreferredSize(new Dimension(100,100));
+        this.add(removeButton);
+
+
+        // 1st Row
+        controlPanel.add(gasButton, 0);
+        controlPanel.add(turboOnButton, 1);
+        controlPanel.add(liftBedButton, 2);
+        controlPanel.add(startButton,3);
+        controlPanel.add(stopButton,4);
+
+        // 2nd Row
+        controlPanel.add(brakeButton, 5);
+        controlPanel.add(turboOffButton, 6);
+        controlPanel.add(lowerBedButton, 7);
+        controlPanel.add(addButton,8);
+        controlPanel.add(removeButton,9);
 
         // This actionListener is for the gas button only
         // TODO: Create more for each component as necessary
